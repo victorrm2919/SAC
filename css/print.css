@@ -1,0 +1,120 @@
+/* Globales */
+
+.contenedor {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Utilidades */
+.grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.columnas-2 {
+    flex: 0 0 calc(16.7% - 2rem);
+}
+
+.columnas-4 {
+    flex: 0 0 calc(33.3% - 2rem);
+}
+
+.columnas-6 {
+    flex: 0 0 calc(50% - 2rem);
+}
+
+.columnas-8 {
+    flex: 0 0 calc(66.6% - 2rem);
+}
+
+.columnas-10 {
+    flex: 0 0 calc(83.3% - 2rem);
+}
+
+.columnas-12 {
+    flex: 0 0 100%;
+}
+
+
+
+/* Detalle */
+
+
+/* Logo e info doctor */
+
+#headR {
+    height: 20vh;
+}
+
+#imgR img {
+    max-width: 50%;
+}
+
+
+#infoDoc h1 {
+    font-size: 2rem;
+}
+
+#infoDoc h2 {
+    font-size: 1.8rem;
+}
+
+#infoDoc h4 {
+    font-size: 1rem;
+}
+
+/* Paciente */
+
+#pac {
+    width: 100%;
+    height: 65vh;
+}
+
+#infoPac {
+    justify-content: space-between
+}
+
+
+#infoPac h4 {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#ind div h4 {
+    font-size: 1.2rem;
+}
+
+#ind div p,
+#ind div span {
+    font-size: 12px;
+}
+
+#trat {
+    width: 50%;
+}
+
+#trat span{
+    padding: 0 1rem;
+    display: block;
+}
+
+
+/* Pie Receta */
+
+#aut {
+    border-top: 4px solid black;
+    margin-top: 2rem;
+}
+
+#infoAut, #firma {
+    display: block;
+}
+
+#b_pdf_imp {
+    display: none;
+}

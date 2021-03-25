@@ -1,0 +1,345 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/* Globales */
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4.8rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+
+h3 {
+    font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 3.0rem;
+    }
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    h4 {
+        font-size: 2.6rem;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.imagen {
+    margin: 1rem;
+}
+
+
+
+/* Utilidades */
+
+.centrar-texto {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    flex: 0 0 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+
+}
+
+.btn-primario {
+    background:#4cd137;
+}
+
+/* Grid */
+
+.grid {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.centrar-columnas {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .columnas-2 {
+        flex: 0 0 calc(16.7% - 2rem);
+    }
+
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+
+    .columnas-6 {
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 2rem);
+    }
+
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 2rem);
+    }
+
+    .columnas-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+/* Detalle */
+
+
+/* Logo e info doctor */
+
+#headR {
+    padding: 2rem;
+    border-bottom: 4px solid black;
+}
+
+#imgR img {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    #imgR img {
+        max-width: 50%;
+    }
+}
+
+
+#imgR p {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #imgR p {
+        font-size: 3rem;
+    }
+
+}
+
+#infoDoc {
+    text-align: center;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    
+    #infoDoc h1 {
+        font-size: 2.8rem;
+        margin: 0.3rem;
+    }
+
+    #infoDoc h2 {
+        font-size: 2.2rem;
+    }
+
+    #infoDoc h4 {
+        font-size: 1.3rem;
+    }
+
+}
+
+.receta {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxMzUpICI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgyNDcsIDI1MCwgMjUyLDEpIj48L3JlY3Q+IDxwYXRoIGZpbHRlcj0idXJsKCNmaWx0ZXIxcGF0dGVybikiIGZpbGw9InJnYmEoMjI2LCAyMzIsIDI0MCwxKSIgZD0iCiAgICAgICAgICAgICAgICBNLTIwIDExIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIHYtMiBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCB6CiAgICAgICAgICAgICAgICBNLTIwIC0yOSBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCB2LTIgbC0yMCAtMjAgbC0yMCAyMCBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgegogICAgICAgICAgICAgICAgTS0yMCA1MSBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCB2LTIgbC0yMCAtMjAgbC0yMCAyMCBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgegogICAgICAgICAgICAgICAgIj48L3BhdGg+PHBhdGggZmlsdGVyPSJ1cmwoI2ZpbHRlcjJwYXR0ZXJuKSIgZmlsbD0icmdiYSgxNjAsIDE3NCwgMTkyLDEpIiBkPSIKICAgICAgICAgICAgICAgIE0tMjAgMzAuNSBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCBsMjAgLTIwIGwyMCAyMCB2LTEgbC0yMCAtMjAgbC0yMCAyMCBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgegogICAgICAgICAgICAgICAgTS0yMCAtOS41IGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIHYtMSBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCB6CiAgICAgICAgICAgICAgICBNLTIwIDcwLjUgbDIwIC0yMCBsMjAgMjAgbDIwIC0yMCBsMjAgMjAgbDIwIC0yMCBsMjAgMjAgdi0xIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCBsLTIwIC0yMCBsLTIwIDIwIHoKICAgICAgICAgICAgICAgICI+PC9wYXRoPjxwYXRoIGZpbHRlcj0idXJsKCNmaWx0ZXIxcGF0dGVybikiIGZpbGw9InJnYmEoMjI2LCAyMzIsIDI0MCwxKSIgZD0iCiAgICAgICAgICAgICAgICBNLTIwIDMxIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIHYtMiBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCB6CiAgICAgICAgICAgICAgICBNLTIwIC05IGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIHYtMiBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCB6CiAgICAgICAgICAgICAgICBNLTIwIDcxIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIGwyMCAtMjAgbDIwIDIwIHYtMiBsLTIwIC0yMCBsLTIwIDIwIGwtMjAgLTIwIGwtMjAgMjAgbC0yMCAtMjAgbC0yMCAyMCB6CiAgICAgICAgICAgICAgICAiPjwvcGF0aD48L3BhdHRlcm4+IDxmaWx0ZXIgaWQ9ImZpbHRlcjFwYXR0ZXJuIj48ZmVHYXVzc2lhbkJsdXIgaW49IlNvdXJjZUdyYXBoaWMiIHN0ZERldmlhdGlvbj0iMC4yIj48L2ZlR2F1c3NpYW5CbHVyPjwvZmlsdGVyPiA8ZmlsdGVyIGlkPSJmaWx0ZXIycGF0dGVybiI+PGZlR2F1c3NpYW5CbHVyIGluPSJTb3VyY2VHcmFwaGljIiBzdGREZXZpYXRpb249IjAuMiI+PC9mZUdhdXNzaWFuQmx1cj48L2ZpbHRlcj48L2RlZnM+IDxyZWN0IGZpbGw9InVybCgjcGF0dGVybikiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiPjwvcmVjdD48L3N2Zz4=")
+}
+
+/* Paciente */
+
+#pac {
+    margin: auto;
+    padding: 1rem;
+}
+
+#infoPac {
+    line-height: 1;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    #infoPac {
+        justify-content: space-between
+    }
+
+}
+
+#infoPac > h4 {
+    padding: 0;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    #infoPac h4 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Indicaciones */
+#ind > div {
+    padding: 1rem;
+}
+
+#ind div h4 {
+    font-size: 1.8rem;
+}
+
+#diagMed p, #trat span {
+    line-height: 1.2;
+}
+
+.medic {
+    padding-top: 1rem;
+}
+
+.medic span{
+    display: block;
+}
+
+
+@media (min-width: 768px) {
+    #trat {
+        width: 50%;
+    }
+    
+
+    .medic span{
+        padding: 0 1rem;
+    }
+}
+
+/* Pie Receta */
+
+
+#infoAut, #firma {
+    display: block;
+}
+
+#firma {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+#firma p,
+#firma span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+}
+
+#infoAut p,
+#infoAut span {
+    font-size: .9rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#infoAut p span {
+    font-weight: 800;
+}
+
+#infoAut .nRec {
+    display: block;
+    margin: auto;
+    font-weight: 800;
+}
+
+#b_pdf_imp button {
+    margin: 1rem;
+}
+
